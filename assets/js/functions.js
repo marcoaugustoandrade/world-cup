@@ -87,7 +87,6 @@ function carregarDados(filtro = getDataAtualFormatada()){
                 //let gradient = "linear-gradient(to right, " + elemento.time_1_cor + " 0%, " + elemento.time_2_cor + " 100%), url(assets/images/ekaterinburg-arena.jpg) no-repeat";
                 let gradient = "linear-gradient(to right,rgba("+elemento.time_1_cor+", 0.7),rgba("+elemento.time_2_cor+", 0.9)),url(assets/images/"+elemento.city_image+") no-repeat";
                 jogoContainer.style.background = gradient;
-                console.log(gradient);
                 jogoContainer.style.backgroundSize = "cover";
                 container.appendChild(jogoContainer);
 
