@@ -1,0 +1,97 @@
+*{
+    margin: 0; padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 380px;
+    box-shadow: 0.8em 0.8em 4em 0px rgba(0,0,0,0.75);
+    margin: 10em;
+    border-radius: 0.2em;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: column;
+    /*width: 350px;*/
+    padding: 1em 0;
+    border-top: 0.4em solid #000000;
+    border-image: linear-gradient(to right, red 0%, blue 100%);
+    border-image-slice: 1;
+    
+}
+    .cabecalho--titulo{
+        text-align: center;
+        font-size: 1.4em;
+    }
+    .cabecalho--data{
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+.rodape{
+    /*width: 350px;*/
+    padding: 2em 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+.jogo-container{
+    display: flex;
+    flex-direction: column;
+    /*width: 350px;  */
+    align-items: center; 
+}
+    .jogo-container--conteudo{
+        display: flex;
+        padding: 1em;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+        .pais{
+            display: flex;
+            align-items: center;
+        }
+            .pais--flag{
+                width: 60px;
+                height: 50px;
+                border-radius: 50%;
+                /*text-shadow: 1em 1em #000000;*/
+                box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.75);
+                
+            }
+            .pais--sigla{
+                color: white;
+                font-size: 1.5em;
+                padding: 0 1em; 
+                text-shadow: 0.08em 0.08em #000000;   
+            }
+        .resultado{
+            color: white;
+            font-size: 0.9em;
+            text-shadow: 0.08em 0.08em #000000;
+        }
+
+    .jogo-container--horario{
+        margin-bottom: 1em;
+    }
+    .jogo-container--horario > span{
+        background-color: white;
+        padding: 0.5em 1.3em;
+        border-radius: 1em;
+        text-align: center;
+        font-size: 0.7em;
+    }
+
+/* conforme confrontos*/
+.egi-uru{
+    background: linear-gradient(to right, red , blue);
+}
+.mar-ira{
+    background: linear-gradient(to right, red , green);
+}
+.por-esp{
+    background: linear-gradient(to right, red , orange);
+}
