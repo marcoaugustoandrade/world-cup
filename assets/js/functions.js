@@ -1,5 +1,9 @@
 let dados;
-let dataAtual = new Date();
+var dataAtual = new Date();
+
+function getDataAtualFormatada(){
+    return dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
+}
 
 let anterior = document.querySelector("#anterior");
 let proximo = document.querySelector("#proximo");
@@ -8,8 +12,8 @@ let dia = document.querySelector("#dia");
 let diasDaSemana = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
 dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
 
-anterior.addEventListener("click", function(e){
-    e.preventDefault();
+
+function proximaData(){
     let dataAnteriorFormatada = (dataAtual.getDate() - 1) + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
     
     //Atualiza a data atual
@@ -17,9 +21,9 @@ anterior.addEventListener("click", function(e){
     dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
     
     carregarDados(dataAnteriorFormatada);
-});
-proximo.addEventListener("click", function(e){
-    e.preventDefault();
+}
+
+function dataAnterior(){
     let dataPosteriorFormatada = (dataAtual.getDate() + 1) + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
 
     //Atualiza a data atual
@@ -27,9 +31,34 @@ proximo.addEventListener("click", function(e){
     dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
 
     carregarDados(dataPosteriorFormatada);
+}
+
+anterior.addEventListener("click", function(e){
+    e.preventDefault();
+    proximaData();
+});
+proximo.addEventListener("click", function(e){
+    e.preventDefault();
+    dataAnterior();
 });
 
-function carregarDados(filtro){
+
+// Pressionamento de teclas
+document.onkeydown = teclaPressionada;
+function teclaPressionada(e){
+    e = e || window.event;
+    
+    if ((e.keyCode == '37') && (getDataAtualFormatada() != '14/6/2018')) {
+        proximaData();
+    }
+    else if ((e.keyCode == '39') && (getDataAtualFormatada() != '15/7/2018')) {
+       dataAnterior();
+    }
+}
+
+
+
+function carregarDados(filtro = getDataAtualFormatada()){
     
     let request = new XMLHttpRequest();
     request.open("GET", "https://raw.githubusercontent.com/marcoaugustoandrade/world-cup/master/dados.json");
@@ -134,15 +163,14 @@ function carregarDados(filtro){
 }
 
 function navegacao(){
-    let dataAtualFormatada = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
     
-    if (dataAtualFormatada == '15/6/2018'){
+    if (getDataAtualFormatada() == '14/6/2018'){
         anterior.classList.add("invisivel");
     } else {
         anterior.classList.remove("invisivel");
     }
 
-    if (dataAtualFormatada == '15/7/2018'){
+    if (getDataAtualFormatada() == '15/7/2018'){
         proximo.classList.add("invisivel");
     } else {
         proximo.classList.remove("invisivel");
