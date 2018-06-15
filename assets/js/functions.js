@@ -1,6 +1,33 @@
 let dados;
 let dataAtual = new Date();
-let dataAtualFormatada = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
+
+let anterior = document.querySelector("#anterior");
+let proximo = document.querySelector("#proximo");
+let dia = document.querySelector("#dia");
+
+let diasDaSemana = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
+dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
+
+anterior.addEventListener("click", function(e){
+    e.preventDefault();
+    let dataAnteriorFormatada = (dataAtual.getDate() - 1) + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
+    
+    //Atualiza a data atual
+    dataAtual.setDate(dataAtual.getDate() - 1);
+    dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
+    
+    carregarDados(dataAnteriorFormatada);
+});
+proximo.addEventListener("click", function(e){
+    e.preventDefault();
+    let dataPosteriorFormatada = (dataAtual.getDate() + 1) + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
+
+    //Atualiza a data atual
+    dataAtual.setDate(dataAtual.getDate() + 1);
+    dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
+
+    carregarDados(dataPosteriorFormatada);
+});
 
 function carregarDados(filtro){
     
@@ -14,15 +41,17 @@ function carregarDados(filtro){
             dados = JSON.parse(request.responseText);
             console.log("Carregando dados...");
 
-            filtro = "16/6/2018";
+            console.log(filtro);
             //Filtrando os dados
             let filtrado = dados.confrontos.filter(n => n.data == filtro);
             
+            let container = document.querySelector("#confrontos");
+            container.innerHTML =  "";
+            navegacao();
+
             filtrado.forEach(function(elemento){
             //dados.confrontos.forEach(function(elemento){
                 //console.log(elemento);
-                
-                let container = document.querySelector("#confrontos");
                 
                 let jogoContainer = document.createElement("div");
                 jogoContainer.classList.add("jogo-container");
@@ -93,7 +122,7 @@ function carregarDados(filtro){
                     jogoContainer.appendChild(jogoContainerHorario);
 
                         let jogoContainerHorarioTexto = document.createElement("span");
-                        jogoContainerHorarioTexto.textContent = "09h00";
+                        jogoContainerHorarioTexto.textContent = elemento.hora;
                         jogoContainerHorario.appendChild(jogoContainerHorarioTexto);
 
             });
@@ -102,4 +131,20 @@ function carregarDados(filtro){
             console.log("Erro ao carrega dados do servidor:" + request.responseText);
         }
     });
+}
+
+function navegacao(){
+    let dataAtualFormatada = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
+    
+    if (dataAtualFormatada == '15/6/2018'){
+        anterior.classList.add("invisivel");
+    } else {
+        anterior.classList.remove("invisivel");
+    }
+
+    if (dataAtualFormatada == '15/7/2018'){
+        proximo.classList.add("invisivel");
+    } else {
+        proximo.classList.remove("invisivel");
+    }
 }

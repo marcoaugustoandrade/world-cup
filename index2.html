@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
-<body onload="carregarDados('15/06/2018')">
+<body onload="carregarDados('15/6/2018')">
     <div class="container">
         <div class="cabecalho">
             <div>
-                <a href="#"><img src="assets/images/baseline-navigate_before-24px.svg" class="cabecalho--icon"></a>
+                <a href="#"><img src="assets/images/baseline-navigate_before-24px.svg" class="cabecalho--icon" id="anterior"></a>
             </div>
             <div class="cabecalho--conteudo">
                 <span class="cabecalho--titulo">PRÓXIMOS JOGOS</span>
-                <span class="cabecalho--data">15/06 (SEX)</span>
+                <span class="cabecalho--data" id="dia">15/06 (SEX)</span>
             </div>
             <div>
-                <a href=""><img src="assets/images/baseline-navigate_next-24px.svg" class="cabecalho--icon"></a>
+                <a href=""><img src="assets/images/baseline-navigate_next-24px.svg" class="cabecalho--icon" id="proximo"></a>
             </div>
         </div>
         <div id="confrontos">

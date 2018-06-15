@@ -3,6 +3,7 @@
         {
             "id": 2,
             "data": "15/6/2018",
+            "horario": "08h00",
             "city": "Ekateringburg Arena",
             "city_image": "",
             "time_1_nome": "Egito",
@@ -19,6 +20,7 @@
         {
             "id": 3,
             "data": "15/6/2018",
+            "horario": "10h00",
             "city": "Krestovsky",
             "city_image": "",
             "time_1_nome": "Marrocos",
@@ -36,6 +38,7 @@
             "id": 4,
             "data": "15/6/2018",
             "city": "Fisht Olympic",
+            "horario": "14h00",
             "city_image": "",
             "time_1_nome": "Português",
             "time_1_sigla": "POR",
@@ -51,6 +54,7 @@
         {
             "id": 5,
             "data": "16/6/2018",
+            "horario": "00h00",
             "city": "Kazan Arena",
             "city_image": "",
             "time_1_nome": "França",
@@ -67,6 +71,7 @@
         {
             "id": 6,
             "data": "16/6/2018",
+            "horario": "00h00",
             "city": "Otkrytiye Arena",
             "city_image": "",
             "time_1_nome": "Argentina",
@@ -83,6 +88,7 @@
         {
             "id": 7,
             "data": "16/6/2018",
+            "horario": "00h00",
             "city": "Arena Mordovia",
             "city_image": "",
             "time_1_nome": "Peru",
@@ -99,6 +105,7 @@
         {
             "id": 8,
             "data": "16/6/2018",
+            "horario": "00h00",
             "city": "Estádio de Kaliningrado",
             "city_image": "",
             "time_1_nome": "Croácia",

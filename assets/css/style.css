@@ -94,6 +94,9 @@
         font-size: 0.7em;
     }
 
+.invisivel{
+    visibility: hidden;
+}    
     @media (min-width: 800px){
 
     }
