@@ -8,10 +8,12 @@
             "time_1_nome": "Egito",
             "time_1_sigla": "EGI",
             "time_1_flag": "eg.svg",
+            "time_1_cor": "red",
             "time_1_gols": 0,
             "time_2_nome": "Uruguai",
             "time_2_sigla": "URU",
             "time_2_flag": "uy.svg",
+            "time_2_cor": "blue",
             "time_2_gols": 0
         },
         {
@@ -22,10 +24,12 @@
             "time_1_nome": "Marrocos",
             "time_1_sigla": "MAR",
             "time_1_flag": "ma.svg",
+            "time_1_cor": "red",
             "time_1_gols": 0,
             "time_2_nome": "Irã",
             "time_2_sigla": "IRA",
             "time_2_flag": "ir.svg",
+            "time_2_cor": "green",
             "time_2_gols": 0
         },
         {
@@ -36,10 +40,12 @@
             "time_1_nome": "Português",
             "time_1_sigla": "POR",
             "time_1_flag": "pt.svg",
+            "time_1_cor": "red",
             "time_1_gols": 0,
             "time_2_nome": "Espanha",
             "time_2_sigla": "ESP",
             "time_2_flag": "es.svg",
+            "time_2_cor": "orange",
             "time_2_gols": 0
         },
         {
@@ -50,10 +56,12 @@
             "time_1_nome": "França",
             "time_1_sigla": "FRA",
             "time_1_flag": "fr.svg",
+            "time_1_cor": "blue",
             "time_1_gols": 0,
             "time_2_nome": "Austrália",
             "time_2_sigla": "AUS",
             "time_2_flag": "as.svg",
+            "time_2_cor": "blue",
             "time_2_gols": 0
         },
         {
@@ -64,10 +72,12 @@
             "time_1_nome": "Argentina",
             "time_1_sigla": "ARG",
             "time_1_flag": "ar.svg",
+            "time_1_cor": "blue",
             "time_1_gols": 0,
             "time_2_nome": "Islândia",
             "time_2_sigla": "ISL",
             "time_2_flag": "is.svg",
+            "time_2_cor": "blue",
             "time_2_gols": 0
         },
         {
@@ -78,10 +88,12 @@
             "time_1_nome": "Peru",
             "time_1_sigla": "PER",
             "time_1_flag": "pe.svg",
+            "time_1_cor": "red",
             "time_1_gols": 0,
             "time_2_nome": "Dinamarca",
             "time_2_sigla": "DIN",
             "time_2_flag": "si.svg",
+            "time_2_cor": "red",
             "time_2_gols": 0
         },
         {
@@ -92,10 +104,12 @@
             "time_1_nome": "Croácia",
             "time_1_sigla": "CRO",
             "time_1_flag": "cr.svg",
+            "time_1_cor": "blue",
             "time_1_gols": 0,
             "time_2_nome": "Nigéria",
             "time_2_sigla": "NGR",
             "time_2_flag": "ng.svg",
+            "time_2_cor": "green",
             "time_2_gols": 0
         }
     ]
