@@ -6,7 +6,7 @@
 .container{
     width: 380px;
     box-shadow: 0.8em 0.8em 4em 0px rgba(0,0,0,0.75);
-    margin: 10em;
+    /*margin: 10em;*/
     border-radius: 0.2em;
 }
 
