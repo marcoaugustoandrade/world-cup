@@ -3,7 +3,7 @@ let dados;
 function carregarDados(){
     
     let request = new XMLHttpRequest();
-    request.open("GET", "dados.json");
+    request.open("GET", "https://raw.githubusercontent.com/marcoaugustoandrade/world-cup/master/dados.json");
     request.send();
     
     request.addEventListener("load", function(){
