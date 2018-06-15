@@ -1,6 +1,8 @@
 let dados;
+let dataAtual = new Date();
+let dataAtualFormatada = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
 
-function carregarDados(){
+function carregarDados(filtro){
     
     let request = new XMLHttpRequest();
     request.open("GET", "https://raw.githubusercontent.com/marcoaugustoandrade/world-cup/master/dados.json");
@@ -11,8 +13,13 @@ function carregarDados(){
             
             dados = JSON.parse(request.responseText);
             console.log("Carregando dados...");
+
+            filtro = "16/6/2018";
+            //Filtrando os dados
+            let filtrado = dados.confrontos.filter(n => n.data == filtro);
             
-            dados.confrontos.forEach(function(elemento){
+            filtrado.forEach(function(elemento){
+            //dados.confrontos.forEach(function(elemento){
                 //console.log(elemento);
                 
                 let container = document.querySelector("#confrontos");
