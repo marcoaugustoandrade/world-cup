@@ -19,7 +19,8 @@ function carregarDados(){
                 
                 let jogoContainer = document.createElement("div");
                 jogoContainer.classList.add("jogo-container");
-                jogoContainer.classList.add("egi-uru");
+                let gradient = "linear-gradient(to right, " + elemento.time_1_cor + " 0%, " + elemento.time_2_cor + " 100%)";
+                jogoContainer.style.background = gradient;
                 container.appendChild(jogoContainer);
 
                     let jogoContainerConteudo = document.createElement("div");
