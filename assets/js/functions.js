@@ -37,10 +37,12 @@ function carregarDados(){
                                 let img1 = document.createElement("img");
                                 img1.classList.add("pais--flag");
                                 img1.src = "assets/images/"+elemento.time_1_flag;
+                                img1.title = elemento.time_1_nome;
                                 pais1.appendChild(img1);
                                 let paisSigla1 = document.createElement("span");
                                 paisSigla1.classList.add("pais--sigla");
                                 paisSigla1.textContent = elemento.time_1_sigla;
+                                paisSigla1.title = elemento.time_1_nome;
                                 pais1.appendChild(paisSigla1);
 
 
@@ -71,10 +73,12 @@ function carregarDados(){
                                 let paisSigla2 = document.createElement("span");
                                 paisSigla2.classList.add("pais--sigla");
                                 paisSigla2.textContent = elemento.time_2_sigla;
+                                paisSigla2.title = elemento.time_2_nome;
                                 pais2.appendChild(paisSigla2);
                                 let img2 = document.createElement("img");
                                 img2.classList.add("pais--flag");
                                 img2.src = "assets/images/"+elemento.time_2_flag;
+                                img2.title = elemento.time_2_nome;
                                 pais2.appendChild(img2);
                     
                     let jogoContainerHorario = document.createElement("div");

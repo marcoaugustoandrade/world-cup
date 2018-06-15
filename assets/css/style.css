@@ -4,30 +4,39 @@
 }
 
 .container{
-    width: 390px;
-    box-shadow: 0.8em 0.8em 4em 0px rgba(0,0,0,0.75);
-    /*margin: 10em;*/
-    border-radius: 0.2em;
+    width: 100%;
+    /*box-shadow: 0.8em 0.8em 4em 0px rgba(0,0,0,0.75);
+    border-radius: 0.2em;*/
 }
 
 .cabecalho{
     display: flex;
-    flex-direction: column;
-    /*width: 350px;*/
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 1em 0;
     border-top: 0.4em solid #000000;
     border-image: linear-gradient(to right, red 0%, blue 100%);
     border-image-slice: 1;
     
 }
-    .cabecalho--titulo{
-        text-align: center;
-        font-size: 1.4em;
+    .cabecalho--icon{
+        padding: 0 1em;
+        width: 60px;
+        height: 50px;
     }
-    .cabecalho--data{
-        text-align: center;
-        font-size: 1.2em;
+    .cabecalho--conteudo{
+        display: flex;
+        flex-direction: column;
     }
+        .cabecalho--titulo{
+            text-align: center;
+            font-size: 1.4em;
+        }
+        .cabecalho--data{
+            text-align: center;
+            font-size: 1.2em;
+        }
 
 .rodape{
     /*width: 350px;*/
@@ -85,13 +94,6 @@
         font-size: 0.7em;
     }
 
-/* conforme confrontos*/
-.egi-uru{
-    background: linear-gradient(to right, red , blue);
-}
-.mar-ira{
-    background: linear-gradient(to right, red , green);
-}
-.por-esp{
-    background: linear-gradient(to right, red , orange);
-}
+    @media (min-width: 800px){
+
+    }
