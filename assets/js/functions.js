@@ -122,7 +122,7 @@ function carregarDados(filtro){
                     jogoContainer.appendChild(jogoContainerHorario);
 
                         let jogoContainerHorarioTexto = document.createElement("span");
-                        jogoContainerHorarioTexto.textContent = elemento.hora;
+                        jogoContainerHorarioTexto.textContent = elemento.horario;
                         jogoContainerHorario.appendChild(jogoContainerHorarioTexto);
 
             });

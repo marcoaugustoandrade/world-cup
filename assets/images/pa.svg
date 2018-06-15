@@ -1,21 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" height="300" viewBox="0 0 36 24">
-<rect width="36" height="24" fill="#fff"/>
-<g fill="#005293">
-<g id="star" transform="translate(9,6)">
-<g id="c">
-<path id="t" d="M 0,-3 v 3 h 1.5 z" transform="rotate(18 0,-3)"/>
-<use xlink:href="#t" transform="scale(-1,1)"/>
-</g>
-<use xlink:href="#c" transform="rotate(72)"/>
-<use xlink:href="#c" transform="rotate(144)"/>
-<use xlink:href="#c" transform="rotate(216)"/>
-<use xlink:href="#c" transform="rotate(288)"/>
-</g>
-<rect y="12" width="18" height="12"/>
-</g>
-<g fill="#d21034">
-<rect x="18" width="18" height="12"/>
-<use xlink:href="#star" x="18" y="12"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-pa" width="512" height="512">
+  <defs>
+    <clipPath id="a">
+      <path fill-opacity=".7" d="M0 0h512v512H0z"/>
+    </clipPath>
+  </defs>
+  <g fill-rule="evenodd" clip-path="url(#a)">
+    <path fill="#fff" d="M-26-25h592.5v596H-26z"/>
+    <path fill="#db0000" d="M255.3-20.4h312.1v275.2h-312z"/>
+    <path fill="#0000ab" d="M-54.5 254.8h309.9V571H-54.5zM179 181.6l-46.5-29.2-46.2 29.5 17.2-48-46.2-29.6 57.1-.4 17.7-47.8 18.1 47.7h57.1l-45.9 30 17.6 47.8z"/>
+    <path fill="#d80000" d="M435.2 449l-46.4-29.2-46.3 29.5 17.2-48-46.2-29.5 57.2-.4 17.7-47.8 18 47.7h57.2l-46 30 17.6 47.7z"/>
+  </g>
 </svg>

@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
-<rect fill="#D52B1E" height="320" width="320"/>
-<rect fill="#fff" height="60" width="200" x="60" y="130"/>
-<rect fill="#fff" height="200" width="60" x="130" y="60"/>
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-ch" width="512" height="512">
+  <g fill-rule="evenodd" stroke-width="1pt">
+    <path fill="#d52b1e" d="M0 0h512v512H0z"/>
+    <g fill="#fff">
+      <path d="M96 208h320v96H96z"/>
+      <path d="M208 96h96v320h-96z"/>
+    </g>
+  </g>
 </svg>
