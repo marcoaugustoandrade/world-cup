@@ -22,7 +22,7 @@
 }
     .cabecalho--icon{
         padding: 0 1em;
-        width: 60px;
+        width: 50px;
         height: 50px;
     }
     .cabecalho--conteudo{
@@ -79,7 +79,7 @@
             }
         .resultado{
             color: white;
-            font-size: 0.9em;
+            font-size: 1.1em;
             text-shadow: 0.08em 0.08em #000000;
         }
 
@@ -97,6 +97,11 @@
 .invisivel{
     visibility: hidden;
 }    
-    @media (min-width: 800px){
+    
 
+@media (min-width: 800px){
+    .pais--flag{
+        width: 100px;
+        height: 100px;
     }
+}
