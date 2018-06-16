@@ -1,6 +1,21 @@
 let dados;
 var dataAtual = new Date();
 
+let request = new XMLHttpRequest();
+request.open("GET", "https://raw.githubusercontent.com/marcoaugustoandrade/world-cup/master/dados.json");
+request.send();
+
+request.addEventListener("load", function(){
+    if (request.status == 200){
+        
+        dados = JSON.parse(request.responseText);
+        console.log("Carregando dados...");
+    } else {
+        console.log("Erro ao carrega dados do servidor:" + request.responseText);
+    }
+});
+
+
 function getDataAtualFormatada(){
     return dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + "/" + dataAtual.getFullYear();
 }
@@ -60,15 +75,7 @@ function teclaPressionada(e){
 
 function carregarDados(filtro = getDataAtualFormatada()){
     
-    let request = new XMLHttpRequest();
-    request.open("GET", "https://raw.githubusercontent.com/marcoaugustoandrade/world-cup/master/dados.json");
-    request.send();
     
-    request.addEventListener("load", function(){
-        if (request.status == 200){
-            
-            dados = JSON.parse(request.responseText);
-            console.log("Carregando dados...");
 
             console.log(filtro);
             //Filtrando os dados
@@ -158,11 +165,7 @@ function carregarDados(filtro = getDataAtualFormatada()){
 
             });
 
-        } else {
-            console.log("Erro ao carrega dados do servidor:" + request.responseText);
         }
-    });
-}
 
 function navegacao(){
     
