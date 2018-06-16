@@ -1,19 +1,23 @@
 let dados;
 var dataAtual = new Date();
 
-let request = new XMLHttpRequest();
-request.open("GET", "https://raw.githubusercontent.com/marcoaugustoandrade/world-cup/master/dados.json");
-request.send();
+function carregarDados(){
+    
+    let request = new XMLHttpRequest();
+    request.open("GET", "https://raw.githubusercontent.com/marcoaugustoandrade/world-cup/master/dados.json");
+    request.send();
 
-request.addEventListener("load", function(){
-    if (request.status == 200){
-        
-        dados = JSON.parse(request.responseText);
-        console.log("Carregando dados...");
-    } else {
-        console.log("Erro ao carrega dados do servidor:" + request.responseText);
-    }
-});
+    request.addEventListener("load", function(){
+        if (request.status == 200){
+            dados = JSON.parse(request.responseText);
+            console.log("Carregando dados...");
+            montar();
+        } else {
+            console.log("Erro ao carrega dados do servidor:" + request.responseText);
+        }
+    });
+
+}
 
 
 function getDataAtualFormatada(){
@@ -35,7 +39,7 @@ function proximaData(){
     dataAtual.setDate(dataAtual.getDate() - 1);
     dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
     
-    carregarDados(dataAnteriorFormatada);
+    montar(dataAnteriorFormatada);
 }
 
 function dataAnterior(){
@@ -45,7 +49,7 @@ function dataAnterior(){
     dataAtual.setDate(dataAtual.getDate() + 1);
     dia.textContent = dataAtual.getDate() + "/" + (dataAtual.getMonth() + 1) + " (" + diasDaSemana[dataAtual.getDay()] + ")";
 
-    carregarDados(dataPosteriorFormatada);
+    montar(dataPosteriorFormatada);
 }
 
 anterior.addEventListener("click", function(e){
@@ -73,9 +77,7 @@ function teclaPressionada(e){
 
 
 
-function carregarDados(filtro = getDataAtualFormatada()){
-    
-    
+function montar(filtro = getDataAtualFormatada()){
 
             console.log(filtro);
             //Filtrando os dados
